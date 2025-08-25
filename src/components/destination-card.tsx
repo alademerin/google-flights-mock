@@ -36,12 +36,10 @@ interface DestinationCardProps {
 }
 
 export default function DestinationCard({ destination }: DestinationCardProps) {
-  console.log('content', destination);
-
   return (
-    <div className="flex flex-row items-start rounded-sm md:max-w-[220px] md:flex-col">
+    <div className="mb-4 flex flex-row items-start rounded-sm md:max-w-[220px] md:flex-col">
       <div className="mt-0 rounded-sm pt-0">
-        <img src={destination?.image?.url} className="rounded-sm" />
+        <img src={destination?.image?.url} className="md:h-[180px] w-[300px] md:w-[220px] rounded-sm" />
       </div>
       <div className="mb-4 ml-2 w-full md:mb-4 md:ml-0 md:py-4">
         <div className="flex w-full justify-between md:mt-2">

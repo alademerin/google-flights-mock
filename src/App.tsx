@@ -325,7 +325,7 @@ function App() {
           {isFlightsEverywhereLoading ? (
             <CircularProgress />
           ) : (
-            flightsEverywhere?.data?.results && (
+            mockFlightsEverywehre?.data?.results && (
               <div className="m-auto mt-8 px-2 pt-2 pb-8 md:h-[164px] md:w-[976px] md:px-0 md:pb-[160px]">
                 <Typography className="mt-8 text-xl font-medium">
                   Find cheap flights from {formik?.values?.origin?.label} to anywhere
