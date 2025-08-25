@@ -325,16 +325,16 @@ function App() {
           {isFlightsEverywhereLoading ? (
             <CircularProgress />
           ) : (
-            mockFlightsEverywehre?.data?.results && (
+            flightsEverywhere?.data?.results && (
               <div className="m-auto mt-8 px-2 pt-2 pb-8 md:h-[164px] md:w-[976px] md:px-0 md:pb-[160px]">
                 <Typography className="mt-8 text-xl font-medium">
                   Find cheap flights from {formik?.values?.origin?.label} to anywhere
                 </Typography>
                 <div className="rounded-sm hover:bg-[#000000]">
-                  <img src={Map} className="h-full w-full" />
+                  <img src={Map} className="h-[150px] w-[200px]" />{' '}
                 </div>
                 <div className="mt-4 justify-between md:flex">
-                  {mockFlightsEverywehre?.data?.results?.slice(0, 4).map(({ content }) => (
+                  {flightsEverywhere?.data?.results?.slice(0, 4).map(({ content }) => (
                     <DestinationCard destination={content} />
                   ))}
                 </div>
